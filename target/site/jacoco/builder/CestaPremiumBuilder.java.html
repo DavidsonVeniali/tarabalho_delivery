@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CestaPremiumBuilder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">trabalgodelivrey</a> &gt; <a href="index.source.html" class="el_package">builder</a> &gt; <span class="el_source">CestaPremiumBuilder.java</span></div><h1>CestaPremiumBuilder.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package builder;
+
+import dao.ProdutoDAO;
+import java.util.ArrayList;
+import model.ItemPedido;
+
+/**
+ *
+ * @author Davidson
+ */
+public class CestaPremiumBuilder implements Builder {
+
+    private ProdutoDAO produtoDAO;
+    private ArrayList&lt;ItemPedido&gt; itens;
+
+<span class="nc" id="L20">    public CestaPremiumBuilder() {</span>
+<span class="nc" id="L21">        this.produtoDAO = ProdutoDAO.getInstance();</span>
+<span class="nc" id="L22">        itens = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L23">    }</span>
+
+    public ArrayList&lt;ItemPedido&gt; getItens() {
+<span class="nc" id="L26">        return itens;</span>
+    }
+
+    @Override
+    public void insereItens() {
+        //carnes
+<span class="nc" id="L32">        itens.add(new ItemPedido(1, produtoDAO.buscaProdutoPorCodigo(28)));</span>
+<span class="nc" id="L33">        itens.add(new ItemPedido(3, produtoDAO.buscaProdutoPorCodigo(29)));</span>
+<span class="nc" id="L34">        itens.add(new ItemPedido(4, produtoDAO.buscaProdutoPorCodigo(30)));</span>
+        //fuba
+<span class="nc" id="L36">        itens.add(new ItemPedido(2, produtoDAO.buscaProdutoPorCodigo(12)));</span>
+        //leite
+<span class="nc" id="L38">        itens.add(new ItemPedido(4, produtoDAO.buscaProdutoPorCodigo(32)));</span>
+        //arroz
+<span class="nc" id="L40">        itens.add(new ItemPedido(3, produtoDAO.buscaProdutoPorCodigo(3)));</span>
+        //banana
+<span class="nc" id="L42">        itens.add(new ItemPedido(4, produtoDAO.buscaProdutoPorCodigo(37)));</span>
+        //feijao
+<span class="nc" id="L44">        itens.add(new ItemPedido(3, produtoDAO.buscaProdutoPorCodigo(11)));</span>
+        //farinha de trigo
+<span class="nc" id="L46">        itens.add(new ItemPedido(2, produtoDAO.buscaProdutoPorCodigo(9)));</span>
+        //cream crackeer
+<span class="nc" id="L48">        itens.add(new ItemPedido(5, produtoDAO.buscaProdutoPorCodigo(4)));</span>
+        //oleo
+<span class="nc" id="L50">        itens.add(new ItemPedido(2, produtoDAO.buscaProdutoPorCodigo(17)));</span>
+        //acucar
+<span class="nc" id="L52">        itens.add(new ItemPedido(2, produtoDAO.buscaProdutoPorCodigo(2)));</span>
+        //pao
+<span class="nc" id="L54">        itens.add(new ItemPedido(5, produtoDAO.buscaProdutoPorCodigo(34)));</span>
+        //batata
+<span class="nc" id="L56">        itens.add(new ItemPedido(9, produtoDAO.buscaProdutoPorCodigo(35)));</span>
+        //achocolatado
+<span class="nc" id="L58">        itens.add(new ItemPedido(2, produtoDAO.buscaProdutoPorCodigo(1)));</span>
+        //manteiga
+<span class="nc" id="L60">        itens.add(new ItemPedido(3, produtoDAO.buscaProdutoPorCodigo(33)));</span>
+        //ovo
+<span class="nc" id="L62">        itens.add(new ItemPedido(7, produtoDAO.buscaProdutoPorCodigo(31)));</span>
+        //sal
+<span class="nc" id="L64">        itens.add(new ItemPedido(8, produtoDAO.buscaProdutoPorCodigo(20)));</span>
+        //macarrão
+<span class="nc" id="L66">        itens.add(new ItemPedido(5, produtoDAO.buscaProdutoPorCodigo(14)));</span>
+        //cafe
+<span class="nc" id="L68">        itens.add(new ItemPedido(4, produtoDAO.buscaProdutoPorCodigo(6)));</span>
+        //tomate
+<span class="nc" id="L70">        itens.add(new ItemPedido(3, produtoDAO.buscaProdutoPorCodigo(36)));</span>
+
+<span class="nc" id="L72">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
