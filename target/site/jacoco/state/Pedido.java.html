@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Pedido.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">trabalgodelivrey</a> &gt; <a href="index.source.html" class="el_package">state</a> &gt; <span class="el_source">Pedido.java</span></div><h1>Pedido.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package state;
+
+import dao.ProdutoDAO;
+import desconto.Desconto;
+import imposto.Imposto;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import model.ItemPedido;
+
+/**
+ *
+ * @author Davidson
+ */
+public class Pedido {
+       private StateAbstrato state;
+
+    private Integer numero;
+    private LocalDateTime data;
+    private Double valorAPagar;
+    private Double valorPedido;
+    private Double valorDescontos;
+    private Double valorImpostos;
+    private ArrayList&lt;ItemPedido&gt; itens;
+    private ArrayList&lt;Desconto&gt; descontos;
+    private ArrayList&lt;Imposto&gt; impostos;
+    private Integer avaliacao;
+
+    private ProdutoDAO produtoDAO;
+
+<span class="fc" id="L34">    public Pedido(Integer numero) {</span>
+<span class="fc" id="L35">        this.itens = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L36">        this.descontos = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L37">        this.impostos = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L38">        this.numero = numero;</span>
+<span class="fc" id="L39">        this.data = LocalDateTime.now();</span>
+<span class="fc" id="L40">        this.state = new StatePedidoNovo(this);</span>
+<span class="fc" id="L41">        this.produtoDAO = ProdutoDAO.getInstance();</span>
+
+<span class="fc" id="L43">    }</span>
+
+    public void setItens(ArrayList&lt;ItemPedido&gt; itens) {
+<span class="fc" id="L46">        this.itens = itens;</span>
+<span class="fc" id="L47">    }</span>
+
+    void changeState(StateAbstrato state){
+<span class="nc" id="L50">        this.state = state;</span>
+<span class="nc" id="L51">    }</span>
+
+    public StateAbstrato getState() {
+<span class="nc" id="L54">        return state;</span>
+    }
+
+    public Integer getNumero() {
+<span class="nc" id="L58">        return numero;</span>
+    }
+
+    public LocalDateTime getData() {
+<span class="nc" id="L62">        return data;</span>
+    }
+
+    public Double getValorAPagar() {
+<span class="nc" id="L66">        return valorAPagar;</span>
+    }
+
+    public ArrayList&lt;ItemPedido&gt; getItens() {
+<span class="nc" id="L70">        return itens;</span>
+    }
+
+    public ProdutoDAO getProdutoDAO() {
+<span class="nc" id="L74">        return produtoDAO;</span>
+    }
+
+    public void setValorAPagar(Double valorTotal) {
+<span class="nc" id="L78">        this.valorAPagar = valorTotal;</span>
+<span class="nc" id="L79">    }</span>
+
+    public void setState(StateAbstrato state) {
+<span class="nc" id="L82">        this.state = state;</span>
+<span class="nc" id="L83">    }</span>
+
+    public void setValorPedido(Double valorPedido) {
+<span class="nc" id="L86">        this.valorPedido = valorPedido;</span>
+<span class="nc" id="L87">    }</span>
+
+    public void setValorDescontos(Double valorDescontos) {
+<span class="nc" id="L90">        this.valorDescontos = valorDescontos;</span>
+<span class="nc" id="L91">    }</span>
+
+    public void setValorImpostos(Double valorImpostos) {
+<span class="nc" id="L94">        this.valorImpostos = valorImpostos;</span>
+<span class="nc" id="L95">    }</span>
+
+    public Double getValorPedido() {
+<span class="nc" id="L98">        return valorPedido;</span>
+    }
+
+    public Double getValorDescontos() {
+<span class="nc" id="L102">        return valorDescontos;</span>
+    }
+
+    public Double getValorImpostos() {
+<span class="nc" id="L106">        return valorImpostos;</span>
+    }
+
+    public ArrayList&lt;Desconto&gt; getDescontos() {
+<span class="nc" id="L110">        return descontos;</span>
+    }
+
+    public ArrayList&lt;Imposto&gt; getImpostos() {
+<span class="nc" id="L114">        return impostos;</span>
+    }
+
+    public Integer getAvaliacao() {
+<span class="nc" id="L118">        return avaliacao;</span>
+    }
+
+    public void setAvaliacao(Integer avaliacao) {
+<span class="nc" id="L122">        this.avaliacao = avaliacao;</span>
+<span class="nc" id="L123">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

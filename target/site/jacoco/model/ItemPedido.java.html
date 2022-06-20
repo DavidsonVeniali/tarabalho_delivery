@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ItemPedido.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">trabalgodelivrey</a> &gt; <a href="index.source.html" class="el_package">model</a> &gt; <span class="el_source">ItemPedido.java</span></div><h1>ItemPedido.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package model;
+
+/**
+ *
+ * @author Davidson
+ */
+public class ItemPedido {
+
+    private Integer quantidade;
+    private Double valorUnitario;
+    private Double valorTotal;
+    private Produto produto;
+
+<span class="fc" id="L18">    public ItemPedido(Integer quantidade, Produto produto) {</span>
+<span class="fc" id="L19">        this.quantidade = quantidade;</span>
+<span class="fc" id="L20">        this.valorUnitario = produto.getPrecoUnitario();</span>
+<span class="fc" id="L21">        this.valorTotal = this.calculaValortotal();</span>
+<span class="fc" id="L22">        this.produto = produto;</span>
+<span class="fc" id="L23">    }</span>
+
+    private Double calculaValortotal() {
+<span class="fc" id="L26">        return this.valorUnitario * this.quantidade;</span>
+    }
+
+    public Integer getQuantidade() {
+<span class="nc" id="L30">        return quantidade;</span>
+    }
+
+    public void setQuantidade(Integer quantidade) {
+<span class="nc" id="L34">        this.quantidade = quantidade;</span>
+<span class="nc" id="L35">    }</span>
+
+    public Double getValorUnitario() {
+<span class="nc" id="L38">        return valorUnitario;</span>
+    }
+
+    public void setValorUnitario(Double valorUnitario) {
+<span class="nc" id="L42">        this.valorUnitario = valorUnitario;</span>
+<span class="nc" id="L43">    }</span>
+
+    public Double getValorTotal() {
+<span class="nc" id="L46">        return valorTotal;</span>
+    }
+
+    public void setValorTotal(Double valorTotal) {
+<span class="nc" id="L50">        this.valorTotal = valorTotal;</span>
+<span class="nc" id="L51">    }</span>
+
+    public Produto getProduto() {
+<span class="nc" id="L54">        return produto;</span>
+    }
+
+    public void setProduto(Produto produto) {
+<span class="nc" id="L58">        this.produto = produto;</span>
+<span class="nc" id="L59">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

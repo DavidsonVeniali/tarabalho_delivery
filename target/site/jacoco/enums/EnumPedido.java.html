@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EnumPedido.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">trabalgodelivrey</a> &gt; <a href="index.source.html" class="el_package">enums</a> &gt; <span class="el_source">EnumPedido.java</span></div><h1>EnumPedido.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package enums;
+
+/**
+ *
+ * @author Davidson
+ */
+<span class="nc" id="L11">public enum EnumPedido {</span>
+
+<span class="nc" id="L13">    NOVO(&quot;Novo&quot;),</span>
+<span class="nc" id="L14">    AGUARDANDO_PAGAMENTO(&quot;Aguardando o pagamento&quot;),</span>
+<span class="nc" id="L15">    CONFIRMADO(&quot;Confirmado&quot;),</span>
+<span class="nc" id="L16">    PRONTO_ENTREGA(&quot;Pronto para ser entregue&quot;),</span>
+<span class="nc" id="L17">    EM_ROTA_ENTREGA(&quot;Em rota da sua residência&quot;),</span>
+<span class="nc" id="L18">    ENTREGUE(&quot;Entregue&quot;),</span>
+<span class="nc" id="L19">    CANCELADO_CLIENTE(&quot;Pedido cancelado pelo cliente&quot;),</span>
+<span class="nc" id="L20">    CANCELADO_ESTABELECIMENTO(&quot;Pedido cancelado pelo estabelecimento&quot;),</span>
+<span class="nc" id="L21">    REEMBOLSADO(&quot;Reembolsado&quot;);</span>
+
+    private String descricao;
+
+<span class="nc" id="L25">    EnumPedido(String descricao) {</span>
+<span class="nc" id="L26">        this.descricao = descricao;</span>
+<span class="nc" id="L27">    }</span>
+
+    public String getDescricao() {
+<span class="nc" id="L30">        return descricao;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
